@@ -34,7 +34,7 @@ spec:
         - name: springboot-secret
       containers:
         - name: back-end
-          image: testrgstr.azurecr.io/springboot-app:11
+          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo:4167a942bf33b243b0d6f674714f764cd4f4fca3
           imagePullPolicy: Always
           ports:
             - containerPort: 8072
