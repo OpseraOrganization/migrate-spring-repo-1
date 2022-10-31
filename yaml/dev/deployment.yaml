@@ -34,7 +34,7 @@ spec:
         - name: springboot-secret
       containers:
         - name: back-end
-          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo:6d6a23d866397cbe264a946cedf885d128344bb7
+          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo:ec94326acdebd1662a5200004a1122e559faa39b
           imagePullPolicy: Always
           ports:
             - containerPort: 8072
