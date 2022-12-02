@@ -34,7 +34,7 @@ spec:
         - name: docker-jfrog
       containers:
         - name: back-end
-          image: 8083-nexus-nei3moew.ldapowner.opsera.io/docker-private:argov1
+          image: opseratest.jfrog.io/opsera-docker-repo:00d97cd5a39abce64000df9db4645d8c52708de6
           imagePullPolicy: Always
           ports:
             - containerPort: 8072
