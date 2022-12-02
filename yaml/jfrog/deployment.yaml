@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyI4MDgzLW5leHVzLW5laTNtb2V3LmxkYXBvd25lci5vcHNlcmEuaW8iOnsidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkIjoiR2hta2R3VE9PRiIsImVtYWlsIjoibmF3YXpAb3BzZXJhLmlvIiwiYXV0aCI6IllXUnRhVzQ2UjJodGEyUjNWRTlQUmc9PSJ9fX0=
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: docker-nexus
+  namespace: testargoapp
+type: kubernetes.io/dockerconfigjson
