@@ -1,10 +1,45 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: argocd
+  
 ---
 apiVersion: v1
 data:
-  .dockerconfigjson: eyJhdXRocyI6eyI4MDgzLW5leHVzLW5laTNtb2V3LmxkYXBvd25lci5vcHNlcmEuaW8iOnsidXNlcm5hbWUiOiJhZG1pbiIsInBhc3N3b3JkIjoiR2hta2R3VE9PRiIsImVtYWlsIjoibmF3YXpAb3BzZXJhLmlvIiwiYXV0aCI6IllXUnRhVzQ2UjJodGEyUjNWRTlQUmc9PSJ9fX0=
+  .dockerconfigjson: eyJhdXRocyI6eyJvcHNlcmF0ZXN0Lmpmcm9nLmlvIjp7InVzZXJuYW1lIjoicHJhYmFrYXJhbkBvcHNlcmEuaW8iLCJwYXNzd29yZCI6Ik9wc2VyYSQjITEyMyIsImVtYWlsIjoicHJhYmFrYXJhbkBvcHNlcmEuaW8iLCJhdXRoIjoiY0hKaFltRnJZWEpoYmtCdmNITmxjbUV1YVc4NlQzQnpaWEpoSkNNaE1USXoifX19
 kind: Secret
 metadata:
   creationTimestamp: null
-  name: docker-nexus
-  namespace: testargoapp
+  name: docker-jfrog
+  namespace: argocd
 type: kubernetes.io/dockerconfigjson
+  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argo-app
+  namespace: argocd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      imagePullSecrets:
+        - name: docker-jfrog
+      containers:
+        - name: back-end
+          image: 8083-nexus-nei3moew.ldapowner.opsera.io/docker-private:argov1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8072
+          env:
+          - name: DOCKER_ENV
+            value: "kubernetes"
+
+---
