@@ -5,5 +5,5 @@ resources:
 namespace: argocd
 images:
 - name: the-my-app
-  newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/argo-demo
+- newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/argo-demo
   newTag:  argo-20220719-126
