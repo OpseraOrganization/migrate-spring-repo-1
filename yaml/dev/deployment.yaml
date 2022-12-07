@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: back-end
-          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo:b7fca158faa996b90f1e30c5eeebeb5381317342
+          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo:b7fca158faa996b90f1e30c5eeebeb5381317343
           ports:
             - containerPort: 8072
           env:
