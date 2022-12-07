@@ -6,4 +6,4 @@ namespace: argocd
 images:
 - name: the-my-app
   newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/argo-demo
-  newTag: 3.4.5
+  newTag: 1abcd
