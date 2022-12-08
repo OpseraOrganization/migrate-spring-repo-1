@@ -8,6 +8,6 @@ public class HelloWorldController {
 
     @GetMapping
     public String hello() {
-        return "Opsera EBS Testing Runcount 59 with Domain and Zone id gitoperation validation";
+        return "Opsera Testing Runcount 59 with Domain and Zone id gitoperation validation";
     }
 }
