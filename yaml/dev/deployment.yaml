@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: back-end
-          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/rollback-argo-test:10
+          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/rollback-argo-test:436dfe00a2b4a8b44a5bec2390359d6e964ca76b
           ports:
             - containerPort: 8072
           env:
