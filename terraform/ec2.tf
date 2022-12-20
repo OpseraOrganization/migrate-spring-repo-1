@@ -18,6 +18,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = var.ami_id
   instance_type = "t2.micro"
+  subnet_id = subnet-02fe8cbeba1a754c7
 
   tags = {
     Name = var.tag_name
