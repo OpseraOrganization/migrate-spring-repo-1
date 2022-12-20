@@ -27,13 +27,17 @@ variable "ami" {
   type        = string
   default     = "ami-01343ceb955942b1f"
 }
+variable "tag_name" {
+  type        = string
+  default     = "Opsera-terraform-hpe-poc"
+}
 
 resource "aws_instance" "web" {
   ami           = var.ami
   instance_type = "t3.micro"
 
   tags = {
-    Name = "Opsera-terraform-PT"
+    Name = var.tag_name
   }
 }
 output "hello_world" {
