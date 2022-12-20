@@ -1,45 +1,35 @@
-variable "awsRegion" {
-  type        = string
-  description = "prefix name"
-  default     = "us-east-2"
-}
-
-variable "access_key" {
+# stage/instance/main.tf
+variable "ami_id" {
   type        = string
   description = "prefix name"
 }
 
-variable "secret_key" {
+variable "tag_name" {
   type        = string
   description = "prefix name"
 }
-
 
 
 provider "aws" {
-  region     = "${var.awsRegion}"
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
+ # profile = "default"
+  region  = "us-east-2"
 }
 
-
-variable "ami" {
-  type        = string
-  default     = "ami-01343ceb955942b1f"
-}
-variable "tag_name" {
-  type        = string
-  default     = "Opsera-terraform-hpe-poc"
-}
-
-resource "aws_instance" "web" {
-  ami           = var.ami
-  instance_type = "t3.micro"
+resource "aws_instance" "app_server" {
+  ami           = var.ami_id
+  instance_type = "t2.micro"
 
   tags = {
     Name = var.tag_name
   }
 }
-output "hello_world" {
-  value = "Hello, World Validation backendstate"
+
+output "instance_id" {
+  description = "ID of the EC2 instance"
+  value       = aws_instance.app_server.id
+}
+
+output "instance_public_ip" {
+  description = "Public IP address of the EC2 instance"
+  value       = aws_instance.app_server.public_ip
 }
