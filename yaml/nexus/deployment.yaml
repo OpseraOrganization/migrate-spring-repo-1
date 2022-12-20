@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: back-end
-          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/argo-demo:argo-20221217-8
+          image: 8084-nexus-awqbabnt.prodqa.opsera.io/hpe-pov-docker:542232b971ae5a8109a9f9ff339eaa787fb68a3c
           ports:
             - containerPort: 8072
           env:
