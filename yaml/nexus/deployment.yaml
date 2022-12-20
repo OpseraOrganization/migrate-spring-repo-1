@@ -10,7 +10,7 @@ data:
 kind: Secret
 metadata:
   creationTimestamp: null
-  name: docker-jfrog
+  name: docker-nexus
   namespace: hpe-pov-app
 type: kubernetes.io/dockerconfigjson
   
@@ -30,6 +30,8 @@ spec:
       labels:
         app: web
     spec:
+      imagePullSecrets:
+        - name: docker-nexus
       containers:
         - name: back-end
           image: 8084-nexus-awqbabnt.prodqa.opsera.io/hpe-pov-docker:542232b971ae5a8109a9f9ff339eaa787fb68a3c
