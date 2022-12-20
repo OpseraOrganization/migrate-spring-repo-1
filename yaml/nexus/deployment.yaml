@@ -34,7 +34,7 @@ spec:
         - name: docker-nexus
       containers:
         - name: back-end
-          image: 8084-nexus-awqbabnt.prodqa.opsera.io/hpe-pov-docker:11adc57a88115d40cb2210a96019ca391561bc0e
+          image: 8084-nexus-awqbabnt.prodqa.opsera.io/hpe-pov-docker:3a78eb482e615d5767bbba1abaf6ff1081df5de8
           ports:
             - containerPort: 8072
           env:
