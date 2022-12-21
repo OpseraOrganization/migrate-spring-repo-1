@@ -5,5 +5,5 @@ resources:
 namespace: argocd
 images:
 - name: the-my-app
-  newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo
-  newTag: "16"
+  newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/rollback-argo-test
+  newTag: argorollbacktest3
