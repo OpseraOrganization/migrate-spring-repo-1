@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: back-end
-          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/opsera-nexus-integrator:argorollbackprodtest2
+          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/opsera-argo-integrator:kube-dev-16-12-2022-10-55-09
           imagePullPolicy: Always
           ports:
             - containerPort: 8072
