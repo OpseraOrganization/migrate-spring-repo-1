@@ -1,0 +1,154 @@
+{
+  "image": "inventory-availability_opsera:623270b79df7384e79724b02ddfed3d45f293aa1",
+  "scan_started": {
+    "seconds": 1675242624,
+    "nanos": 784227682
+  },
+  "scan_duration": 7,
+  "image_size": 497518591,
+  "digest": "sha256:82c50361e186e626d2b659ebcaa05f6d9031a84285f07bfef5299f4ac3121542",
+  "os": "alpine",
+  "version": "3.14.8",
+  "resources": [
+    {
+      "resource": {
+        "format": "apk",
+        "name": "curl",
+        "version": "7.79.1-r4",
+        "arch": "x86_64",
+        "cpe": "pkg:/alpine:3.14.8:curl:7.79.1-r4",
+        "license": "MIT",
+        "layer": "/bin/sh -c apk upgrade --update && apk add --update tzdata && apk add --update curl && ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime && echo \"America/Los_Angeles\" > /etc/timezone&& date && rm -fr /tmp/hsperfdata_root /tmp/java-se-9-ri /tmp/jenkins6176389349036278673.sh /tmp/openjdk-10+44_linux-x64_bin_ri.tar.gz /tmp/openjdk-11+28_linux-x64_bin.tar.gz /tmp/openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz /tmp/openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz /tmp/openjdk-9+181_linux-x64_ri.zip /tmp/scripts /var/cache/apk/*",
+        "layer_digest": "sha256:29126e13db333faa0f18ddf5ff52f5fe60f51bef391606b8f725d2cabec5b224",
+        "src_name": "curl",
+        "src_version": "7.79.1-r4"
+      },
+      "scanned": true,
+      "vulnerabilities": [
+        {
+          "name": "CVE-2022-32221",
+          "description": "When doing HTTP(S) transfers, libcurl might erroneously use the read callback (`CURLOPT_READFUNCTION`) to ask for data to send, even when the `CURLOPT_POSTFIELDS` option has been set, if the same handle previously was used to issue a `PUT` request which used that callback. This flaw may surprise the application and cause it to misbehave and either send off the wrong data or use memory after free or similar in the subsequent `POST` request. The problem exists in the logic for a reused handle when it is changed from a PUT to a POST.",
+          "nvd_score_version": "CVSS v2",
+          "nvd_url": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-32221",
+          "publish_date": "2022-12-05",
+          "modification_date": "2023-01-29",
+          "nvd_score_v3": 9.8,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "nvd_severity_v3": "critical",
+          "aqua_score": 9.8,
+          "aqua_severity": "critical",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 9.8",
+          "aqua_score_classification": "NVD CVSS V3 Score: 9.8"
+        },
+        {
+          "name": "CVE-2022-42915",
+          "description": "curl before 7.86.0 has a double free. If curl is told to use an HTTP proxy for a transfer with a non-HTTP(S) URL, it sets up the connection to the remote server by issuing a CONNECT request to the proxy, and then tunnels the rest of the protocol through. An HTTP proxy might refuse this request (HTTP proxies often only allow outgoing connections to specific port numbers, like 443 for HTTPS) and instead return a non-200 status code to the client. Due to flaws in the error/cleanup handling, this could trigger a double free in curl if one of the following schemes were used in the URL for the transfer: dict, gopher, gophers, ldap, ldaps, rtmp, rtmps, or telnet. The earliest affected version is 7.77.0.",
+          "nvd_score_version": "CVSS v2",
+          "nvd_url": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-42915",
+          "publish_date": "2022-10-29",
+          "modification_date": "2023-01-26",
+          "nvd_score_v3": 9.8,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "nvd_severity_v3": "critical",
+          "aqua_score": 9.8,
+          "aqua_severity": "critical",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 9.8",
+          "aqua_score_classification": "NVD CVSS V3 Score: 9.8"
+        },
+        {
+          "name": "CVE-2022-42916",
+          "description": "In curl before 7.86.0, the HSTS check could be bypassed to trick it into staying with HTTP. Using its HSTS support, curl can be instructed to use HTTPS directly (instead of using an insecure cleartext HTTP step) even when HTTP is provided in the URL. This mechanism could be bypassed if the host name in the given URL uses IDN characters that get replaced with ASCII counterparts as part of the IDN conversion, e.g., using the character UTF-8 U+3002 (IDEOGRAPHIC FULL STOP) instead of the common ASCII full stop of U+002E (.). The earliest affected version is 7.77.0 2021-05-26.",
+          "nvd_score_version": "CVSS v2",
+          "nvd_url": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-42916",
+          "publish_date": "2022-10-29",
+          "modification_date": "2023-01-26",
+          "nvd_score_v3": 7.5,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "nvd_severity_v3": "high",
+          "aqua_score": 7.5,
+          "aqua_severity": "high",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 7.5",
+          "aqua_score_classification": "NVD CVSS V3 Score: 7.5"
+        }
+      ]
+    }
+  ],
+  "image_assurance_results": {
+    "checks_performed": [
+      {
+        "policy_id": 1,
+        "policy_name": "Default",
+        "control": "root_user"
+      },
+      {
+        "policy_id": 1,
+        "policy_name": "Default",
+        "control": "malware"
+      },
+      {
+        "policy_id": 1,
+        "policy_name": "Default",
+        "control": "max_severity",
+        "maximum_severity_allowed": "high",
+        "maximum_severity_found": "critical",
+        "no_fix_excluded": true
+      },
+      {
+        "policy_id": 1,
+        "policy_name": "Default",
+        "control": "sensitive_data"
+      },
+      {
+        "policy_id": 6,
+        "policy_name": "Lower-Image-Log4j-Monitor",
+        "control": "blacklisted_packages"
+      }
+    ]
+  },
+  "vulnerability_summary": {
+    "total": 3,
+    "critical": 2,
+    "high": 1,
+    "score_average": 9.033334
+  },
+  "scan_options": {
+    "scan_executables": true,
+    "scan_sensitive_data": true,
+    "webhook_url": "https://es-sephora.splunkcloud.com",
+    "scan_malware": true,
+    "scan_files": true,
+    "scan_timeout": 3600000000000,
+    "manual_pull_fallback": true,
+    "save_adhoc_scans": true,
+    "use_cvss3": true,
+    "dockerless": true,
+    "system_image_platform": "amd64:::",
+    "telemetry_enabled": true,
+    "enable_fast_scanning": true,
+    "memoryThrottling": true,
+    "suggest_os_upgrade": true,
+    "adhoc_scan_retention": 30
+  },
+  "initiating_user": "jenkins-lower-user",
+  "data_date": 1675235304,
+  "pull_name": "inventory-availability_opsera:623270b79df7384e79724b02ddfed3d45f293aa1",
+  "scan_id": 37859,
+  "required_image_platform": "amd64:::",
+  "scanned_image_platform": "amd64::linux:",
+  "security_feeds_used": {
+    "executables": "3c54a0edea6b6d"
+  },
+  "image_id": 8911,
+  "internal_digest_id": {
+    "id": 8428
+  },
+  "local": true,
+  "OriginFromHostImage": true,
+  "CanSkipFileHashSave": true
+}
