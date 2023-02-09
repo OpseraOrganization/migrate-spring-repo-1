@@ -8,6 +8,6 @@ public class HelloWorldController {
 
     @GetMapping
     public String hello() {
-        return "Opsera Testing with jfrog test";
+        return "Opsera Testing with jfrog rollback test";
     }
 }
