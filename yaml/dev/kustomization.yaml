@@ -6,4 +6,4 @@ namespace: argocd
 images:
 - name: the-my-app
   newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo
-  newTag: argorollbacktest3
+  newTag: c031c91613e99fcfc55026defc0cc46536e49947
