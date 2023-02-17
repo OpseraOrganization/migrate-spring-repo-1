@@ -5,5 +5,5 @@ resources:
 namespace: argocd
 images:
 - name: the-my-app
-  newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/github-integrator
-  newTag: 20230104-20230104065832-3
+  newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo
+  newTag: argorollbacktest3
