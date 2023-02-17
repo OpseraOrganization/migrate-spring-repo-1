@@ -5,5 +5,5 @@ resources:
 namespace: argocd
 images:
 - name: the-my-app
-  newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo
-  newTag: c031c91613e99fcfc55026defc0cc46536e49947
+  newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/python-example
+  newTag: 2f26c9adab8810ffc171b4807e6ca32f69a12a13
