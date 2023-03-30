@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: back-end
-          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/opsera-argo-integrator:prod
+          image: testrgstr.azurecr.io/rollback:10
           imagePullPolicy: Always
           ports:
             - containerPort: 8072
