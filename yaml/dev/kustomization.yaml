@@ -1,9 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - deployment.yaml
+- deployment.yaml
 namespace: argocd1
 images:
-- name: the-my-app
 - newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo
   newTag: v3
+- name: the-my-app
+  newName: 792373136340.dkr.ecr.us-east-1.amazonaws.com/nlpargoecrrepo
+  newTag: "18"
