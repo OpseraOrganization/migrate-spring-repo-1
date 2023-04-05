@@ -4,6 +4,6 @@ resources:
   - deployment.yaml
 namespace: argocd1
 images:
-- name: example
+- name: the-my-app
 - newName: 440953937617.dkr.ecr.us-east-2.amazonaws.com/spring-boot-repo
   newTag: v3
