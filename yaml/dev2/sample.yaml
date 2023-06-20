@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: back-end
-          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/qatest09:244
+          image: 440953937617.dkr.ecr.us-east-2.amazonaws.com/qatest09:245
           ports:
             - containerPort: 8072
           env:
